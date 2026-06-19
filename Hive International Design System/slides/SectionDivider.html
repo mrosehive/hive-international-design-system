@@ -1,0 +1,34 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Section Divider" subtitle="Deep-slate divider with oversized index numeral" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; }
+  .slide { position: relative; width: 1280px; height: 720px; background: var(--surface-sunken); overflow: hidden; font-family: var(--font-body); display: flex; align-items: center; }
+  .hex { position: absolute; inset: 0; background-image: var(--hive-honeycomb); background-size: 234px auto; opacity: 0.5; }
+  .inner { position: relative; padding: 0 96px; display: flex; align-items: center; gap: 64px; }
+  .num { font-family: var(--font-display); font-size: 300px; line-height: 0.8; letter-spacing: 0.02em; color: var(--hive-gold); opacity: 0.92; }
+  .col { }
+  .eyebrow { font-size: 15px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--hive-gold); }
+  .rule { width: 56px; height: 3px; background: var(--hive-gold); margin: 22px 0 26px; }
+  .title { font-family: var(--font-display); font-size: 80px; line-height: 0.95; letter-spacing: 0.04em; color: var(--text-strong); margin: 0; }
+  .sub { margin-top: 22px; font-size: 17px; font-weight: 300; line-height: 1.6; color: var(--text-muted); max-width: 460px; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="hex"></div>
+    <div class="inner">
+      <div class="num">02</div>
+      <div class="col">
+        <div class="eyebrow">Section Two</div>
+        <div class="rule"></div>
+        <h2 class="title">OPERATIONAL<br>CAPABILITIES</h2>
+        <p class="sub">Embedded advisory support across criminal justice, digital forensics, border security, and intelligence modernization.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

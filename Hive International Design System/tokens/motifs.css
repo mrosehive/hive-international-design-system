@@ -1,0 +1,60 @@
+/* ============================================================
+   Hive International — Visual Motifs
+   The brand's quiet hexagon/honeycomb geometry. Hex mesh sits at
+   LOW opacity (5–15%) behind content as surface texture — never
+   behind dense text. Tie geometry back to the globe mark.
+   These are utility helpers; use them sparingly.
+   ============================================================ */
+
+:root {
+  /* Faint honeycomb mesh as a tileable background-image (gold-on-transparent
+     hairline hexagons). Drop onto a slate surface and the hex grid reads at
+     ~8% strength. Tune visibility with --hex-opacity on the element. */
+  --hive-hex-mesh:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='96' viewBox='0 0 56 96'><g fill='none' stroke='%23B8BCC4' stroke-width='1' stroke-opacity='0.5'><path d='M28 1 L54 16 L54 48 L28 63 L2 48 L2 16 Z'/><path d='M28 49 L54 64 L54 96 L28 111 L2 96 L2 64 Z'/><path d='M0 -32 L26 -17 L26 15 M56 -32 L30 -17 L30 15'/></g></svg>"); /* @kind other */
+
+  /* Sleeker, sparse variant: single large outlined hexagons on a wide grid —
+     no connector lines, no overlap. Modern, quiet watermark for covers. */
+  --hive-hex-sparse:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='168' height='146' viewBox='0 0 168 146'><path d='M42 14 L84 38 L84 86 L42 110 L0 86 L0 38 Z' fill='none' stroke='%23B8BCC4' stroke-width='1.1' stroke-opacity='0.5'/></svg>"); /* @kind other */
+
+  /* FILLED honeycomb mosaic — modeled on the hiveintl.com social banner:
+     subtly varied slate cells with faint deep-slate gaps. THE preferred
+     background for full-slate cover pages. Use subtly and sparingly;
+     never on warm-white/light pages. Seamless tile (logical 234x180). */
+  --hive-honeycomb: url("../assets/patterns/honeycomb-slate.png"); /* @kind other */
+}
+
+/* Apply a faint hex texture to any dark surface. */
+.hive-hex-surface {
+  position: relative;
+  isolation: isolate;
+}
+.hive-hex-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--hive-hex-mesh);
+  background-size: 56px 96px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* The signature thin gold rule used under eyebrows and section labels. */
+.hive-rule-gold {
+  width: 40px;
+  height: 2px;
+  background: var(--hive-gold);
+  border: 0;
+}
+
+/* Eyebrow / section micro-label treatment. */
+.hive-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}

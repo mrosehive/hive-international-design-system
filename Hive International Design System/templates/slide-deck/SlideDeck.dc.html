@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Slide Deck" description="Hive 16:9 presentation deck — title, agenda, section divider, content, stats, two-column, quote and closing slides" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+</helmet>
+
+<div style="background:#0d1218; padding:40px; display:flex; flex-direction:column; align-items:center; gap:40px; font-family:var(--font-body);">
+
+  <!-- 1 · TITLE -->
+  <section data-screen-label="Slide 01 — Title" style="position:relative; width:1280px; height:720px; background:var(--surface-base); overflow:hidden; box-shadow:var(--shadow-lg);">
+    <div style="position:absolute; inset:0; background-image:url(../../assets/patterns/honeycomb-slate.png); background-size:234px auto; opacity:0.55;"></div>
+    <img src="../../assets/logos/globe_slate.svg" alt="" aria-hidden="true" style="position:absolute; right:-110px; top:50%; transform:translateY(-50%); height:720px; opacity:0.10;">
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, var(--hive-deep-slate) 0%, rgba(20,27,34,0) 60%);"></div>
+    <div style="position:absolute; left:96px; top:50%; transform:translateY(-50%);">
+      <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" ref="{{ logoRef }}" style="height:120px; display:block; margin-bottom:54px;">
+      <div style="font-size:15px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--hive-gold);">Capability Briefing · 2026</div>
+      <div style="width:56px; height:3px; background:var(--hive-gold); margin:22px 0 30px;"></div>
+      <h1 style="font-family:var(--font-display); font-size:100px; line-height:0.92; letter-spacing:0.03em; color:var(--text-strong); margin:0;">ADVISORY DEPTH.<br><span style="color:var(--hive-gold);">OPERATIONAL RESULTS.</span></h1>
+      <div style="margin-top:38px; font-size:14px; letter-spacing:0.05em; color:var(--text-muted);">Prepared for [Client Agency] &nbsp;·&nbsp; [Date]</div>
+    </div>
+  </section>
+
+  <!-- 2 · AGENDA -->
+  <section data-screen-label="Slide 02 — Agenda" style="position:relative; width:1280px; height:720px; background:var(--surface-base); overflow:hidden; box-shadow:var(--shadow-lg);">
+    <div style="position:absolute; inset:0; background-image:var(--hive-honeycomb); background-size:234px auto; opacity:0.35;"></div>
+    <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" style="position:absolute; top:48px; left:96px; height:64px;">
+    <div style="position:absolute; left:96px; top:150px; right:96px;">
+      <div style="font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--hive-gold);">Agenda</div>
+      <div style="width:48px; height:3px; background:var(--hive-gold); margin:16px 0 44px;"></div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px 64px; max-width:980px;">
+        <div style="display:flex; gap:20px; align-items:baseline; border-bottom:1px solid var(--border-hairline); padding-bottom:18px;"><span style="font-family:var(--font-display); font-size:34px; color:var(--hive-gold);">01</span><span style="font-size:21px; color:var(--text-strong); font-weight:500;">The Mission Context</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; border-bottom:1px solid var(--border-hairline); padding-bottom:18px;"><span style="font-family:var(--font-display); font-size:34px; color:var(--hive-gold);">02</span><span style="font-size:21px; color:var(--text-strong); font-weight:500;">Operational Capabilities</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; border-bottom:1px solid var(--border-hairline); padding-bottom:18px;"><span style="font-family:var(--font-display); font-size:34px; color:var(--hive-gold);">03</span><span style="font-size:21px; color:var(--text-strong); font-weight:500;">Approach &amp; Methodology</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; border-bottom:1px solid var(--border-hairline); padding-bottom:18px;"><span style="font-family:var(--font-display); font-size:34px; color:var(--hive-gold);">04</span><span style="font-size:21px; color:var(--text-strong); font-weight:500;">Past Performance</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; border-bottom:1px solid var(--border-hairline); padding-bottom:18px;"><span style="font-family:var(--font-display); font-size:34px; color:var(--hive-gold);">05</span><span style="font-size:21px; color:var(--text-strong); font-weight:500;">Engagement Model</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; border-bottom:1px solid var(--border-hairline); padding-bottom:18px;"><span style="font-family:var(--font-display); font-size:34px; color:var(--hive-gold);">06</span><span style="font-size:21px; color:var(--text-strong); font-weight:500;">Next Steps</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · SECTION DIVIDER -->
+  <section data-screen-label="Slide 03 — Section Divider" style="position:relative; width:1280px; height:720px; background:var(--surface-sunken); overflow:hidden; box-shadow:var(--shadow-lg); display:flex; align-items:center;">
+    <div style="position:absolute; inset:0; background-image:var(--hive-honeycomb); background-size:234px auto; opacity:0.4;"></div>
+    <div style="position:relative; padding:0 96px; display:flex; align-items:center; gap:64px;">
+      <div style="font-family:var(--font-display); font-size:300px; line-height:0.8; color:var(--hive-gold);">02</div>
+      <div>
+        <div style="font-size:15px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--hive-gold);">Section Two</div>
+        <div style="width:56px; height:3px; background:var(--hive-gold); margin:22px 0 26px;"></div>
+        <h2 style="font-family:var(--font-display); font-size:80px; line-height:0.95; letter-spacing:0.04em; color:var(--text-strong); margin:0;">OPERATIONAL<br>CAPABILITIES</h2>
+        <p style="margin-top:22px; font-size:17px; font-weight:300; line-height:1.6; color:var(--text-muted); max-width:460px;">Embedded advisory support across criminal justice, digital forensics, border security, and intelligence modernization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · CONTENT (bulleted + supporting panel) -->
+  <section data-screen-label="Slide 04 — Content" style="position:relative; width:1280px; height:720px; background:var(--surface-base); overflow:hidden; box-shadow:var(--shadow-lg);">
+    <div style="position:absolute; inset:0; background-image:var(--hive-honeycomb); background-size:234px auto; opacity:0.35;"></div>
+    <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" style="position:absolute; top:48px; left:96px; height:64px;">
+    <div style="position:absolute; left:96px; right:96px; top:150px; display:grid; grid-template-columns:1.3fr 1fr; gap:56px;">
+      <div>
+        <div style="font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--hive-gold);">The Mission Context</div>
+        <div style="width:48px; height:3px; background:var(--hive-gold); margin:16px 0 0;"></div>
+        <h2 style="font-family:var(--font-display); font-size:52px; letter-spacing:0.04em; color:var(--text-strong); margin:26px 0 30px;">Why It Matters</h2>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:20px;">
+          <li style="display:flex; gap:16px;"><span style="color:var(--hive-gold); font-size:14px; line-height:1.9;">⬢</span><span style="font-size:17px; line-height:1.55; color:var(--text-strong);">Transnational criminal networks operate collaboratively across borders, outpacing siloed responses.</span></li>
+          <li style="display:flex; gap:16px;"><span style="color:var(--hive-gold); font-size:14px; line-height:1.9;">⬢</span><span style="font-size:17px; line-height:1.55; color:var(--text-strong);">Partner agencies need field-tested capability, not theory — delivered where missions happen.</span></li>
+          <li style="display:flex; gap:16px;"><span style="color:var(--hive-gold); font-size:14px; line-height:1.9;">⬢</span><span style="font-size:17px; line-height:1.55; color:var(--text-strong);">Hive's interconnected network model builds trusted ecosystems of practitioners.</span></li>
+        </ul>
+      </div>
+      <div style="background:var(--surface-card); border-left:3px solid var(--hive-gold); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:32px 30px; align-self:start; margin-top:96px;">
+        <div style="font-family:var(--font-display); font-size:22px; letter-spacing:0.04em; color:var(--text-strong); margin-bottom:14px;">In Brief</div>
+        <p style="font-size:14.5px; line-height:1.7; color:var(--text-muted); margin:0;">Operationally embedded advisory support for complex global security missions — disciplined expertise, trusted field relationships, and practical execution in high-consequence environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · STAT BAND -->
+  <section data-screen-label="Slide 05 — By the Numbers" style="position:relative; width:1280px; height:720px; background:var(--surface-base); overflow:hidden; box-shadow:var(--shadow-lg);">
+    <div style="position:absolute; inset:0; background-image:var(--hive-honeycomb); background-size:234px auto; opacity:0.4;"></div>
+    <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" style="position:absolute; top:48px; left:96px; height:64px;">
+    <div style="position:absolute; left:96px; right:96px; top:170px;">
+      <div style="font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--hive-gold);">By the Numbers</div>
+      <div style="width:48px; height:3px; background:var(--hive-gold); margin:18px 0 60px;"></div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr);">
+        <div style="padding-left:32px;"><div style="font-family:var(--font-display); font-size:92px; line-height:0.85; color:var(--hive-gold);">40+</div><div style="margin-top:16px; font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-strong);">Countries</div><div style="margin-top:6px; font-size:14px; color:var(--text-muted);">Cross-border operations</div></div>
+        <div style="padding-left:32px; border-left:1px solid var(--hive-gold);"><div style="font-family:var(--font-display); font-size:92px; line-height:0.85; color:var(--hive-gold);">1,200+</div><div style="margin-top:16px; font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-strong);">Trained</div><div style="margin-top:6px; font-size:14px; color:var(--text-muted);">Law enforcement &amp; military</div></div>
+        <div style="padding-left:32px; border-left:1px solid var(--hive-gold);"><div style="font-family:var(--font-display); font-size:92px; line-height:0.85; color:var(--hive-gold);">6</div><div style="margin-top:16px; font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-strong);">Domains</div><div style="margin-top:6px; font-size:14px; color:var(--text-muted);">Forensics to border</div></div>
+        <div style="padding-left:32px; border-left:1px solid var(--hive-gold);"><div style="font-family:var(--font-display); font-size:92px; line-height:0.85; color:var(--hive-gold);">97%</div><div style="margin-top:16px; font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-strong);">Retention</div><div style="margin-top:6px; font-size:14px; color:var(--text-muted);">Repeat engagements</div></div>
+      </div>
+    </div>
+    <div style="position:absolute; left:96px; bottom:54px; font-family:var(--font-display); font-size:17px; letter-spacing:0.05em;"><span style="color:var(--hive-gold);">ADVISORY DEPTH.</span> <span style="color:var(--text-muted);">OPERATIONAL RESULTS.</span></div>
+  </section>
+
+  <!-- 6 · TWO-COLUMN CAPABILITY -->
+  <section data-screen-label="Slide 06 — Capabilities" style="position:relative; width:1280px; height:720px; background:var(--surface-base); overflow:hidden; box-shadow:var(--shadow-lg);">
+    <div style="position:absolute; inset:0; background-image:var(--hive-honeycomb); background-size:234px auto; opacity:0.35;"></div>
+    <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" style="position:absolute; top:48px; left:96px; height:64px;">
+    <div style="position:absolute; left:96px; right:96px; top:150px;">
+      <div style="font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--hive-gold);">What We Do</div>
+      <div style="width:48px; height:3px; background:var(--hive-gold); margin:16px 0 0;"></div>
+      <h2 style="font-family:var(--font-display); font-size:52px; letter-spacing:0.04em; color:var(--text-strong); margin:24px 0 44px;">Core Domains</h2>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+        <div style="background:var(--surface-card); border:1px solid var(--border-hairline); border-left:3px solid var(--hive-gold); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:30px 28px; box-shadow:var(--shadow-sm);"><div style="font-family:var(--font-display); font-size:30px; color:var(--hive-gold);">01</div><div style="font-family:var(--font-display); font-size:26px; letter-spacing:0.03em; color:var(--text-strong); margin:20px 0 12px;">Digital Forensics</div><div style="font-size:14.5px; line-height:1.6; color:var(--text-muted);">Evidence handling, examination workflows, and lab modernization.</div></div>
+        <div style="background:var(--surface-card); border:1px solid var(--border-hairline); border-left:3px solid var(--hive-gold); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:30px 28px; box-shadow:var(--shadow-sm);"><div style="font-family:var(--font-display); font-size:30px; color:var(--hive-gold);">02</div><div style="font-family:var(--font-display); font-size:26px; letter-spacing:0.03em; color:var(--text-strong); margin:20px 0 12px;">Border Security</div><div style="font-size:14.5px; line-height:1.6; color:var(--text-muted);">Intelligence-led targeting, customs and trade enforcement.</div></div>
+        <div style="background:var(--surface-card); border:1px solid var(--border-hairline); border-left:3px solid var(--hive-gold); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:30px 28px; box-shadow:var(--shadow-sm);"><div style="font-family:var(--font-display); font-size:30px; color:var(--hive-gold);">03</div><div style="font-family:var(--font-display); font-size:26px; letter-spacing:0.03em; color:var(--text-strong); margin:20px 0 12px;">Investigations</div><div style="font-size:14.5px; line-height:1.6; color:var(--text-muted);">Multi-jurisdictional support, coordination and case management.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · QUOTE -->
+  <section data-screen-label="Slide 07 — Quote" style="position:relative; width:1280px; height:720px; background:var(--surface-raised); overflow:hidden; box-shadow:var(--shadow-lg); display:flex; align-items:center;">
+    <div style="position:absolute; inset:0; background-image:var(--hive-honeycomb); background-size:234px auto; opacity:0.35;"></div>
+    <img src="../../assets/logos/globe_silver.svg" alt="" aria-hidden="true" style="position:absolute; left:-80px; bottom:-90px; height:420px; opacity:0.08;">
+    <div style="position:relative; padding:0 120px; max-width:1000px;">
+      <div style="font-family:var(--font-display); font-size:120px; line-height:0.4; color:var(--hive-gold);">&ldquo;</div>
+      <p style="font-family:var(--font-body); font-weight:300; font-size:42px; line-height:1.35; color:var(--text-strong); margin:24px 0 0;">Just as criminal networks operate <span style="color:var(--hive-gold); font-weight:400;">across borders</span>, Hive applies an interconnected network model to build trusted ecosystems of practitioners.</p>
+      <div style="margin-top:40px; display:flex; align-items:center; gap:16px;"><span style="width:40px; height:2px; background:var(--hive-gold);"></span><span style="font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted);"><b style="color:var(--text-strong); font-weight:600;">[Name, Title]</b> · Hive International</span></div>
+    </div>
+  </section>
+
+  <!-- 8 · CLOSING / CONTACT -->
+  <section data-screen-label="Slide 08 — Closing" style="position:relative; width:1280px; height:720px; background:var(--surface-sunken); overflow:hidden; box-shadow:var(--shadow-lg);">
+    <div style="position:absolute; inset:0; background-image:url(../../assets/patterns/honeycomb-slate.png); background-size:234px auto; opacity:0.4;"></div>
+    <img src="../../assets/logos/globe_slate.svg" alt="" aria-hidden="true" style="position:absolute; right:-110px; top:50%; transform:translateY(-50%); height:680px; opacity:0.09;">
+    <div style="position:absolute; left:96px; top:50%; transform:translateY(-50%);">
+      <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" style="height:64px; display:block; margin-bottom:48px;">
+      <h2 style="font-family:var(--font-display); font-size:84px; line-height:0.95; letter-spacing:0.04em; color:var(--text-strong); margin:0;">LET'S BUILD THE<br><span style="color:var(--hive-gold);">CAPABILITY TOGETHER.</span></h2>
+      <div style="margin-top:40px; display:flex; gap:48px; font-size:14px; color:var(--text-muted); line-height:1.9;">
+        <div><div style="color:var(--hive-gold); font-weight:600; letter-spacing:0.1em; text-transform:uppercase; font-size:11px; margin-bottom:6px;">Contact</div>[Name]<br>[email@hiveintl.com]<br>[+1 (000) 000-0000]</div>
+        <div><div style="color:var(--hive-gold); font-weight:600; letter-spacing:0.1em; text-transform:uppercase; font-size:11px; margin-bottom:6px;">Contract</div><span style="font-family:var(--font-mono); font-size:12px;">GSA MAS 47QRAA25D004V<br>UEI C6QCCKKD7MQ6 · CAGE 7K4T0<br>hiveintl.com</span></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;logoSize&quot;: { &quot;editor&quot;: &quot;int&quot;, &quot;default&quot;: 120, &quot;min&quot;: 60, &quot;max&quot;: 200, &quot;step&quot;: 4, &quot;tsType&quot;: &quot;number&quot; }
+}">
+class Component extends DCLogic {
+  logoRef = React.createRef();
+
+  applyLogoSize() {
+    if (this.logoRef.current) {
+      this.logoRef.current.style.height = (this.props.logoSize ?? 120) + 'px';
+    }
+  }
+  componentDidMount() { this.applyLogoSize(); }
+  componentDidUpdate() { this.applyLogoSize(); }
+
+  renderVals() {
+    return { logoRef: this.logoRef };
+  }
+}
+</script>
+</body>
+</html>

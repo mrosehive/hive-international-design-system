@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Letterhead" description="Hive branded US Letter letterhead — warm-white print page with logo header, contract identity sidebar and slate footer" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+</helmet>
+
+<div style="background:#0d1218; padding:40px; display:flex; justify-content:center; font-family:var(--font-body);">
+  <div data-screen-label="Letterhead" style="position:relative; width:816px; min-height:1056px; background:var(--surface-light); box-shadow:var(--shadow-lg); overflow:hidden; display:flex; flex-direction:column;">
+
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; padding:54px 64px 0;">
+      <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" ref="{{ logoRef }}" style="height:88px;">
+      <div style="text-align:right; font-size:11px; color:var(--text-muted-light); line-height:1.7;">
+        Hive International, LLC<br>
+        [Street Address]<br>
+        [City, State ZIP]<br>
+        hiveintl.com
+      </div>
+    </div>
+    <div style="height:2px; background:var(--hive-gold); margin:22px 64px 0;"></div>
+
+    <!-- Body -->
+    <div style="flex:1; padding:44px 64px; color:var(--text-on-light); font-size:14px; line-height:1.75;">
+      <div style="font-size:13px; color:var(--text-muted-light); margin-bottom:28px;">[Month DD, YYYY]</div>
+      <div style="margin-bottom:24px;">
+        [Recipient Name]<br>
+        [Title]<br>
+        [Agency / Organization]<br>
+        [Address]
+      </div>
+      <p style="margin:0 0 16px;">Dear [Recipient],</p>
+      <p style="margin:0 0 16px;">[Opening paragraph — state the purpose of the letter clearly and directly. Hive's voice is executive, mission-oriented, and operationally fluent. Lead with the outcome or request.]</p>
+      <p style="margin:0 0 16px;">[Body paragraph — supporting detail, proof points, and measurable outcomes. Reference specific capability domains, contract vehicles, or past performance as relevant.]</p>
+      <p style="margin:0 0 16px;">[Closing paragraph — restate the next step and how to proceed.]</p>
+      <p style="margin:28px 0 0;">Respectfully,</p>
+      <div style="margin-top:40px;">
+        <div style="font-weight:600; color:var(--text-on-light); font-size:15px;">[First Last]</div>
+        <div style="font-size:12px; color:var(--text-muted-light); margin-top:2px;">[Title] · Hive International, LLC</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="background:var(--surface-sunken); padding:18px 64px; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted);">UEI C6QCCKKD7MQ6 · CAGE 7K4T0 · GSA MAS 47QRAA25D004V</span>
+      <span style="font-family:var(--font-display); font-size:13px; letter-spacing:0.08em;"><span style="color:var(--hive-gold);">ADVISORY DEPTH.</span> <span style="color:var(--text-muted);">OPERATIONAL RESULTS.</span></span>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 896, &quot;height&quot;: 1136 },
+  &quot;logoSize&quot;: { &quot;editor&quot;: &quot;int&quot;, &quot;default&quot;: 88, &quot;min&quot;: 28, &quot;max&quot;: 160, &quot;step&quot;: 2, &quot;tsType&quot;: &quot;number&quot; }
+}">
+class Component extends DCLogic {
+  logoRef = React.createRef();
+
+  applyLogoSize() {
+    if (this.logoRef.current) {
+      this.logoRef.current.style.height = (this.props.logoSize ?? 88) + 'px';
+    }
+  }
+  componentDidMount() { this.applyLogoSize(); }
+  componentDidUpdate() { this.applyLogoSize(); }
+
+  renderVals() {
+    return { logoRef: this.logoRef };
+  }
+}
+</script>
+</body>
+</html>

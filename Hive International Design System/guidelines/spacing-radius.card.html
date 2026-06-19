@@ -1,0 +1,22 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radius" subtitle="Quiet, structured corners — 3 / 6 / 10px" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--surface-base); font-family:var(--font-body); padding:24px 32px; display:flex; gap:20px; }
+  .item { text-align:center; }
+  .box { width:96px; height:64px; background:var(--surface-raised); border:1px solid var(--border-strong); }
+  .v { font-family:var(--font-mono); font-size:10px; color:var(--text-accent); margin-top:9px; }
+  .n { font-size:10px; color:var(--text-muted); margin-top:2px; }
+  .pill { width:96px; height:30px; margin-top:17px; background:var(--surface-raised); border:1px solid var(--border-strong); border-radius:999px; }
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="border-radius:3px"></div><div class="v">3px · sm</div><div class="n">inputs, tags</div></div>
+  <div class="item"><div class="box" style="border-radius:6px"></div><div class="v">6px · md</div><div class="n">cards, buttons</div></div>
+  <div class="item"><div class="box" style="border-radius:10px"></div><div class="v">10px · lg</div><div class="n">feature, modal</div></div>
+  <div class="item"><div class="pill"></div><div class="v">999px · pill</div><div class="n">badges only</div></div>
+</body>
+</html>

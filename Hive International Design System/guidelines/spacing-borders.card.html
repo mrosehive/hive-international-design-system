@@ -1,0 +1,23 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Borders & Accent Rule" subtitle="Hairline dividers + the signature gold left-accent" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--surface-base); font-family:var(--font-body); padding:24px 32px; display:flex; gap:20px; align-items:stretch; }
+  .panel { flex:1; background:var(--surface-raised); border-radius:var(--radius-md); padding:16px 18px; }
+  .accent { border-left:var(--border-accent-w) solid var(--hive-gold); border-radius:0 var(--radius-md) var(--radius-md) 0; }
+  .hair { border:1px solid var(--border-hairline); }
+  .strong { border:1px solid var(--border-strong); }
+  .t { font-size:12px; font-weight:var(--weight-medium); color:var(--text-strong); }
+  .d { font-size:11px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+  code { font-family:var(--font-mono); font-size:10px; color:var(--text-accent); }
+</style>
+</head>
+<body>
+  <div class="panel accent"><div class="t">Gold accent rule</div><div class="d">3px left border for callouts, info blocks &amp; pull quotes. <code>--border-accent-w</code></div></div>
+  <div class="panel hair"><div class="t">Hairline</div><div class="d">Dividers &amp; resting card edges on dark. <code>0.07 white</code></div></div>
+  <div class="panel strong"><div class="t">Strong border</div><div class="d">Inputs &amp; interactive edges. <code>0.14 white</code></div></div>
+</body>
+</html>

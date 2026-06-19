@@ -1,0 +1,91 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Core Primitives" subtitle="Buttons, badges, tags, inputs, stats, cards & avatars" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin:0; background:var(--surface-base); font-family:var(--font-body); padding:26px 28px; color:var(--text-body); }
+  .sec { margin-bottom:24px; }
+  .sec:last-child { margin-bottom:0; }
+  .lab { font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--text-accent); margin-bottom:12px; }
+  .row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  h3 { font-family:var(--font-display); letter-spacing:.04em; color:var(--text-strong); font-size:20px; margin:0 0 6px; }
+  p { margin:0; font-size:13px; color:var(--text-muted); line-height:1.6; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+
+  <script type="text/babel">
+    const { Button, Badge, Tag, Card, StatBlock, Eyebrow, InfoBlock, Input, Avatar } = window.HiveInternationalDesignSystem_54bd19;
+
+    function Demo() {
+      return (
+        <React.Fragment>
+          <div className="sec">
+            <div className="lab">Buttons</div>
+            <div className="row">
+              <Button variant="primary">Request Briefing</Button>
+              <Button variant="secondary">Capability Statement</Button>
+              <Button variant="ghost">Learn More</Button>
+              <Button variant="primary" size="sm">Small</Button>
+              <Button variant="secondary" disabled>Disabled</Button>
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">Badges &amp; Tags</div>
+            <div className="row">
+              <Badge tone="accent">Active Contract</Badge>
+              <Badge tone="success" solid>Cleared</Badge>
+              <Badge tone="info">In Review</Badge>
+              <Badge tone="neutral">Archived</Badge>
+              <Tag>Digital Forensics</Tag>
+              <Tag active onClick={() => {}}>Border Security</Tag>
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">Stat Blocks</div>
+            <div className="row" style={{ gap: '0' }}>
+              <StatBlock value="40+" label="Countries Served" detail="Cross-border operations" style={{ flex: 1 }} />
+              <StatBlock value="1,200+" label="Officers Trained" detail="Law enforcement & military" divider style={{ flex: 1 }} />
+              <StatBlock value="97%" label="Client Retention" detail="Repeat engagements" divider style={{ flex: 1 }} />
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">Cards, Info & Forms</div>
+            <div className="row" style={{ alignItems: 'stretch' }}>
+              <Card accent style={{ flex: 1 }}>
+                <Eyebrow>Capability</Eyebrow>
+                <h3 style={{ marginTop: '12px' }}>Digital Forensics</h3>
+                <p>Evidence handling and intelligence-informed modernization.</p>
+              </Card>
+              <InfoBlock title="Logo Color Rule" accent="gold" style={{ flex: 1 }}>
+                Hive Gold and Charcoal on a transparent background. Slate is the surface, never a logo fill.
+              </InfoBlock>
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <Input label="Work Email" placeholder="name@agency.gov" />
+                <div className="row">
+                  <Avatar name="Dana Reyes" />
+                  <Avatar name="Marcus Hale" ring="gold" />
+                  <Avatar name="Imani Cole" size={32} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </React.Fragment>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

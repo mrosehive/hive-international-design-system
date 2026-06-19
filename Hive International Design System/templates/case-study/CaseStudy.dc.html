@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Case Study" description="Hive engagement case study — slate cover header with challenge / approach / outcome narrative and a results metric band" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+</helmet>
+
+<div style="background:#0d1218; padding:40px; display:flex; justify-content:center; font-family:var(--font-body);">
+  <div data-screen-label="Case Study" style="position:relative; width:816px; min-height:1056px; background:var(--surface-light); box-shadow:var(--shadow-lg); overflow:hidden; display:flex; flex-direction:column;">
+
+    <!-- Cover header -->
+    <div style="position:relative; background:var(--surface-base); padding:40px 56px 36px; overflow:hidden;">
+      <div style="position:absolute; inset:0; background-image:url(../../assets/patterns/honeycomb-slate.png); background-size:234px auto; opacity:0.6;"></div>
+      <img src="../../assets/logos/globe_slate.svg" alt="" aria-hidden="true" style="position:absolute; right:-50px; top:50%; transform:translateY(-50%); height:230px; opacity:0.10;">
+      <div style="position:relative;">
+        <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" ref="{{ logoRef }}" style="height:72px; margin-bottom:30px;">
+        <div style="font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--hive-gold);">Case Study · [Capability Domain]</div>
+        <div style="width:48px; height:3px; background:var(--hive-gold); margin:14px 0 18px;"></div>
+        <h1 style="font-family:var(--font-display); font-size:46px; line-height:1.0; letter-spacing:0.03em; color:var(--text-strong); margin:0; max-width:600px;">[ENGAGEMENT TITLE — THE OUTCOME, STATED PLAINLY]</h1>
+        <div style="margin-top:16px; font-size:13px; color:var(--text-muted);">[Client / Region] &nbsp;·&nbsp; [Timeframe]</div>
+      </div>
+    </div>
+    <div style="height:3px; background:var(--hive-gold);"></div>
+
+    <!-- Results metric band -->
+    <div style="background:var(--surface-sunken); padding:24px 56px; display:grid; grid-template-columns:repeat(3,1fr);">
+      <div style="padding-right:24px;"><div style="font-family:var(--font-display); font-size:48px; line-height:0.9; color:var(--hive-gold);">[00%]</div><div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-strong); margin-top:8px;">[Key Result]</div></div>
+      <div style="padding:0 24px; border-left:1px solid var(--hive-gold);"><div style="font-family:var(--font-display); font-size:48px; line-height:0.9; color:var(--hive-gold);">[000]</div><div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-strong); margin-top:8px;">[Key Result]</div></div>
+      <div style="padding-left:24px; border-left:1px solid var(--hive-gold);"><div style="font-family:var(--font-display); font-size:48px; line-height:0.9; color:var(--hive-gold);">[00]</div><div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-strong); margin-top:8px;">[Key Result]</div></div>
+    </div>
+
+    <!-- Narrative -->
+    <div style="flex:1; padding:36px 56px; color:var(--text-on-light);">
+      <div style="margin-bottom:26px;">
+        <div style="font-family:var(--font-display); font-size:24px; letter-spacing:0.04em; color:var(--text-on-light); margin-bottom:10px;">The Challenge</div>
+        <div style="width:36px; height:2px; background:var(--hive-gold); margin-bottom:14px;"></div>
+        <p style="margin:0; font-size:14px; line-height:1.75;">[Describe the operational problem the client faced — the mission context, the gap, and the stakes. Keep it specific and credible. Hive's voice is direct and proof-oriented.]</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <div style="font-family:var(--font-display); font-size:24px; letter-spacing:0.04em; color:var(--text-on-light); margin-bottom:10px;">The Approach</div>
+        <div style="width:36px; height:2px; background:var(--hive-gold); margin-bottom:14px;"></div>
+        <p style="margin:0 0 14px; font-size:14px; line-height:1.75;">[Explain how Hive embedded advisors and applied its network model. Reference the capability domains and methods used.]</p>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px;">
+          <li style="display:flex; gap:10px;"><span style="color:var(--hive-gold-deep);">▪</span>[Action / workstream one]</li>
+          <li style="display:flex; gap:10px;"><span style="color:var(--hive-gold-deep);">▪</span>[Action / workstream two]</li>
+          <li style="display:flex; gap:10px;"><span style="color:var(--hive-gold-deep);">▪</span>[Action / workstream three]</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:var(--font-display); font-size:24px; letter-spacing:0.04em; color:var(--text-on-light); margin-bottom:10px;">The Outcome</div>
+        <div style="width:36px; height:2px; background:var(--hive-gold); margin-bottom:14px;"></div>
+        <p style="margin:0; font-size:14px; line-height:1.75;">[State the measurable results and lasting capability built. Tie back to the mission. End on the durable impact for the client and their partners.]</p>
+      </div>
+
+      <!-- Pull quote -->
+      <div style="background:var(--surface-light-card); border-left:3px solid var(--hive-gold); border-radius:0 8px 8px 0; padding:20px 24px; margin-top:30px; box-shadow:var(--shadow-light);">
+        <p style="margin:0; font-size:16px; font-weight:300; font-style:italic; line-height:1.6; color:var(--text-on-light);">&ldquo;[Client testimonial — a short, attributable quote on the impact of the engagement.]&rdquo;</p>
+        <div style="margin-top:12px; font-size:12px; color:var(--text-muted-light);">— [Name, Title, Agency]</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="background:var(--surface-sunken); padding:14px 56px; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted);">GSA MAS 47QRAA25D004V · UEI C6QCCKKD7MQ6</span>
+      <span style="font-family:var(--font-display); font-size:12px; letter-spacing:0.08em;"><span style="color:var(--hive-gold);">ADVISORY DEPTH.</span> <span style="color:var(--text-muted);">OPERATIONAL RESULTS.</span></span>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 896, &quot;height&quot;: 1136 },
+  &quot;logoSize&quot;: { &quot;editor&quot;: &quot;int&quot;, &quot;default&quot;: 72, &quot;min&quot;: 28, &quot;max&quot;: 120, &quot;step&quot;: 2, &quot;tsType&quot;: &quot;number&quot; }
+}">
+class Component extends DCLogic {
+  logoRef = React.createRef();
+
+  applyLogoSize() {
+    if (this.logoRef.current) {
+      this.logoRef.current.style.height = (this.props.logoSize ?? 72) + 'px';
+    }
+  }
+  componentDidMount() { this.applyLogoSize(); }
+  componentDidUpdate() { this.applyLogoSize(); }
+
+  renderVals() {
+    return { logoRef: this.logoRef };
+  }
+}
+</script>
+</body>
+</html>

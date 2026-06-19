@@ -1,0 +1,64 @@
+/* ============================================================
+   Hive International — Color Tokens
+   Slate-led surfaces, restrained gold emphasis. Default surfaces
+   are always slate-family; gold and silver are accent/hierarchy
+   layers — never fills. Use gold sparingly: it carries emphasis
+   precisely because it is restrained.
+   ============================================================ */
+
+:root {
+  /* ---- Brand core palette (raw values) ---- */
+  --hive-slate:        #1B222A;   /* primary surface — the Hive background */
+  --hive-charcoal:     #2E3A45;   /* secondary surface, cards, layered dark UI */
+  --hive-deep-slate:   #141B22;   /* footers, nav bars, depth layers, near-black */
+  --hive-silver:       #B8BCC4;   /* secondary text, globe mark, dividers */
+  --hive-gold:         #F2B632;   /* accent + emphasis ONLY — use sparingly */
+  --hive-warm-white:   #F5F2ED;   /* light/print backgrounds, primary on-dark text */
+  --hive-text:         #E8E4DE;   /* default body text on dark surfaces */
+
+  /* ---- Gold tints/shades (derived, harmonious) ---- */
+  --hive-gold-bright:  #F7C95A;   /* hover / lift on gold */
+  --hive-gold-deep:    #D99A1C;   /* pressed gold, gold on warm-white for contrast */
+  --hive-gold-soft:    rgba(242, 182, 50, 0.12); /* faint gold wash / selected rows */
+
+  /* ---- Slate tints (derived) ---- */
+  --hive-slate-raise:  #38454F;   /* hover surface above charcoal */
+  --hive-line:         rgba(255, 255, 255, 0.07); /* hairline divider on dark */
+  --hive-line-strong:  rgba(255, 255, 255, 0.14); /* stronger divider / input border */
+
+  /* ---- Semantic status (mission-credible, low-saturation) ---- */
+  --hive-success:      #4CAF50;
+  --hive-danger:       #E53935;
+  --hive-info:         #5B9BD5;
+  --hive-warning:      var(--hive-gold);
+
+  /* ============================================================
+     Semantic aliases — reference these in components, not raw vals
+     ============================================================ */
+
+  /* Surfaces (dark mode is the brand default) */
+  --surface-base:      var(--hive-slate);
+  --surface-raised:    var(--hive-charcoal);
+  --surface-sunken:    var(--hive-deep-slate);
+  --surface-hover:     var(--hive-slate-raise);
+  --surface-card:      var(--hive-charcoal);
+
+  /* Text */
+  --text-strong:       var(--hive-warm-white);  /* headings on dark */
+  --text-body:         var(--hive-text);         /* body on dark */
+  --text-muted:        var(--hive-silver);       /* secondary / supporting */
+  --text-accent:       var(--hive-gold);         /* emphasis, micro-labels */
+  --text-on-gold:      var(--hive-deep-slate);   /* text sitting on a gold fill */
+  --text-on-light:     var(--hive-slate);        /* body on warm-white surfaces */
+  --text-muted-light:  #6b6f76;                  /* secondary on warm-white */
+
+  /* Lines & borders */
+  --border-hairline:   var(--hive-line);
+  --border-strong:     var(--hive-line-strong);
+  --border-accent:     var(--hive-gold);
+
+  /* Light-mode (proposal / print / web-body pages) */
+  --surface-light:     var(--hive-warm-white);
+  --surface-light-card:#ffffff;
+  --border-light:      rgba(27, 34, 42, 0.10);
+}

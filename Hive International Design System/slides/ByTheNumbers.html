@@ -1,0 +1,46 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="By the Numbers" subtitle="Stat band with gold numerals and dividers" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; }
+  .slide { position: relative; width: 1280px; height: 720px; background: var(--surface-base); overflow: hidden; font-family: var(--font-body); }
+  .hex { position: absolute; inset: 0; background-image: var(--hive-honeycomb); background-size: 234px auto; opacity: 0.4; }
+  .logo { position: absolute; top: 56px; left: 96px; height: 30px; }
+  .inner { position: absolute; left: 96px; right: 96px; top: 156px; }
+  .eyebrow { font-size: 14px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--hive-gold); }
+  .rule { width: 48px; height: 3px; background: var(--hive-gold); margin: 18px 0 0; }
+  .title { font-family: var(--font-display); font-size: 60px; letter-spacing: 0.04em; color: var(--text-strong); margin: 26px 0 64px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { padding-left: 32px; }
+  .stat:not(:first-child) { border-left: 1px solid var(--hive-gold); }
+  .v { font-family: var(--font-display); font-size: 92px; line-height: 0.85; letter-spacing: 0.02em; color: var(--hive-gold); }
+  .l { margin-top: 16px; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-strong); }
+  .d { margin-top: 6px; font-size: 14px; color: var(--text-muted); }
+  .tagline { position: absolute; left: 96px; bottom: 56px; }
+  .tagline .bar { width: 48px; height: 2px; background: var(--hive-gold); margin-bottom: 14px; }
+  .tagline .t { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.05em; }
+  .tagline .t .g { color: var(--hive-gold); } .tagline .t .s { color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="hex"></div>
+    <img class="logo" src="../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International">
+    <div class="inner">
+      <div class="eyebrow">By the Numbers</div>
+      <div class="rule"></div>
+      <h2 class="title">Operational Reach</h2>
+      <div class="row">
+        <div class="stat"><div class="v">40+</div><div class="l">Countries Engaged</div><div class="d">Cross-border operations</div></div>
+        <div class="stat"><div class="v">1,200+</div><div class="l">Practitioners Trained</div><div class="d">Law enforcement &amp; military</div></div>
+        <div class="stat"><div class="v">6</div><div class="l">Capability Domains</div><div class="d">Forensics to border</div></div>
+        <div class="stat"><div class="v">97%</div><div class="l">Client Retention</div><div class="d">Repeat engagements</div></div>
+      </div>
+    </div>
+    <div class="tagline"><div class="bar"></div><div class="t"><span class="g">Advisory Depth.</span> <span class="s">Operational Results.</span></div></div>
+  </div>
+</body>
+</html>

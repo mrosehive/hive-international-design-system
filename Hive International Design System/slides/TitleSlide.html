@@ -1,0 +1,36 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Title Slide" subtitle="Slate cover with globe watermark + tagline" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; }
+  .slide { position: relative; width: 1280px; height: 720px; background: var(--surface-base); overflow: hidden; font-family: var(--font-body); }
+  .hex { position: absolute; inset: 0; background-image: var(--hive-honeycomb); background-size: 234px auto; opacity: 0.5; }
+  .globe { position: absolute; right: -110px; top: 50%; transform: translateY(-50%); height: 720px; opacity: 0.10; }
+  .wash { position: absolute; inset: 0; background: linear-gradient(90deg, var(--hive-deep-slate) 0%, rgba(20,27,34,0) 60%); }
+  .inner { position: absolute; left: 96px; top: 50%; transform: translateY(-50%); }
+  .logo { height: 46px; margin-bottom: 56px; display: block; }
+  .eyebrow { font-size: 15px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--hive-gold); }
+  .rule { width: 56px; height: 3px; background: var(--hive-gold); margin: 22px 0 30px; }
+  .title { font-family: var(--font-display); font-size: 104px; line-height: 0.92; letter-spacing: 0.03em; color: var(--text-strong); margin: 0; }
+  .title .g { color: var(--hive-gold); }
+  .meta { margin-top: 40px; font-size: 14px; letter-spacing: 0.05em; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="hex"></div>
+    <img class="globe" src="../assets/logos/globe_slate.svg" alt="">
+    <div class="wash"></div>
+    <div class="inner">
+      <img class="logo" src="../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International">
+      <div class="eyebrow">Capability Briefing · 2026</div>
+      <div class="rule"></div>
+      <h1 class="title">ADVISORY DEPTH.<br><span class="g">OPERATIONAL RESULTS.</span></h1>
+      <div class="meta">Hive International, LLC &nbsp;·&nbsp; Global Security · Criminal Justice · Operational Advisory</div>
+    </div>
+  </div>
+</body>
+</html>

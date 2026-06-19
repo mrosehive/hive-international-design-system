@@ -1,0 +1,33 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Big Quote" subtitle="Charcoal pull-quote slide with gold accent" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; }
+  .slide { position: relative; width: 1280px; height: 720px; background: var(--surface-raised); overflow: hidden; font-family: var(--font-body); display: flex; align-items: center; }
+  .hex { position: absolute; inset: 0; background-image: var(--hive-honeycomb); background-size: 234px auto; opacity: 0.35; }
+  .globe { position: absolute; left: -80px; bottom: -90px; height: 420px; opacity: 0.08; }
+  .inner { position: relative; padding: 0 120px; max-width: 1000px; }
+  .mark { font-family: var(--font-display); font-size: 120px; line-height: 0.4; color: var(--hive-gold); }
+  .quote { font-family: var(--font-body); font-weight: 300; font-size: 42px; line-height: 1.35; color: var(--text-strong); margin: 24px 0 0; }
+  .quote .g { color: var(--hive-gold); font-weight: 400; }
+  .by { margin-top: 40px; display: flex; align-items: center; gap: 16px; }
+  .bar { width: 40px; height: 2px; background: var(--hive-gold); }
+  .name { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+  .name b { color: var(--text-strong); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="hex"></div>
+    <img class="globe" src="../assets/logos/globe_silver.svg" alt="">
+    <div class="inner">
+      <div class="mark">“</div>
+      <p class="quote">Just as criminal networks operate <span class="g">across borders</span>, Hive applies an interconnected network model to build trusted ecosystems of practitioners.</p>
+      <div class="by"><span class="bar"></span><span class="name"><b>Hive International</b> &nbsp;·&nbsp; Brand Principle</span></div>
+    </div>
+  </div>
+</body>
+</html>

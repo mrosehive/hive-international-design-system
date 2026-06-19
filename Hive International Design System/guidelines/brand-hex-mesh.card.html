@@ -1,0 +1,79 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Hex Mesh Motif" subtitle="Website-style honeycomb watermark — adjustable cell size, opacity & density" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--surface-base); font-family:var(--font-body); padding:20px; }
+  .demo { position:relative; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border-hairline); min-height:150px; background:var(--hive-deep-slate); display:flex; align-items:center; padding:0 32px; }
+  .pat { position:absolute; inset:0; background-repeat:repeat; pointer-events:none; }
+  .copy { position:relative; }
+  .eyebrow { font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--text-accent); }
+  .rule { width:40px; height:2px; background:var(--hive-gold); margin:10px 0 12px; }
+  .h { font-family:var(--font-display); font-size:32px; letter-spacing:.04em; color:var(--text-strong); line-height:1; }
+  .s { font-size:12px; color:var(--text-muted); margin-top:8px; }
+  .controls { display:flex; gap:22px; align-items:center; flex-wrap:wrap; margin-top:16px; padding:14px 16px; background:var(--surface-raised); border:1px solid var(--border-hairline); border-radius:var(--radius-md); }
+  .ctl { display:flex; flex-direction:column; gap:6px; }
+  .ctl label { font-size:9px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--text-muted); }
+  .ctl input[type=range] { width:150px; accent-color:var(--hive-gold); }
+  .ctl select { background:var(--surface-base); color:var(--text-strong); border:1px solid var(--border-strong); border-radius:var(--radius-sm); padding:6px 10px; font-family:var(--font-body); font-size:12px; }
+  .val { font-family:var(--font-mono); font-size:10px; color:var(--text-accent); }
+</style>
+</head>
+<body>
+  <div class="demo">
+    <div class="pat" id="pat"></div>
+    <div class="copy">
+      <div class="eyebrow">Surface Texture</div>
+      <div class="rule"></div>
+      <div class="h">QUIET HONEYCOMB GEOMETRY</div>
+      <div class="s">Tessellated like hiveintl.com · tie all geometry back to the globe mark</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctl">
+      <label>Style</label>
+      <select id="style">
+        <option value="mosaic" selected>Banner mosaic (slate fill)</option>
+        <option value="honeycomb">Honeycomb outline</option>
+        <option value="sparse">Sparse</option>
+        <option value="mesh">Dense mesh</option>
+      </select>
+    </div>
+    <div class="ctl">
+      <label>Cell size · <span class="val" id="sizeV">200px</span></label>
+      <input type="range" id="size" min="100" max="360" value="200">
+    </div>
+    <div class="ctl">
+      <label>Opacity · <span class="val" id="opV">60%</span></label>
+      <input type="range" id="op" min="5" max="100" value="60">
+    </div>
+  </div>
+
+  <script>
+    const PATTERNS = {
+      mosaic: 'url("../assets/patterns/honeycomb-slate.png")',
+      honeycomb: 'url("../assets/patterns/honeycomb.svg")',
+      sparse: getComputedStyle(document.documentElement).getPropertyValue('--hive-hex-sparse').trim(),
+      mesh: getComputedStyle(document.documentElement).getPropertyValue('--hive-hex-mesh').trim(),
+    };
+    const pat = document.getElementById('pat');
+    const styleSel = document.getElementById('style');
+    const size = document.getElementById('size');
+    const op = document.getElementById('op');
+    const sizeV = document.getElementById('sizeV');
+    const opV = document.getElementById('opV');
+    function render() {
+      pat.style.backgroundImage = PATTERNS[styleSel.value];
+      pat.style.backgroundSize = size.value + 'px auto';
+      pat.style.opacity = (op.value / 100).toFixed(2);
+      sizeV.textContent = size.value + 'px';
+      opV.textContent = op.value + '%';
+    }
+    [styleSel, size, op].forEach(el => el.addEventListener('input', render));
+    render();
+  </script>
+</body>
+</html>

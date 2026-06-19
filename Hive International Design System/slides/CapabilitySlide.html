@@ -1,0 +1,42 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Capability Slide" subtitle="Three-column capability layout with cards" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; }
+  .slide { position: relative; width: 1280px; height: 720px; background: var(--surface-base); overflow: hidden; font-family: var(--font-body); }
+  .hex { position: absolute; inset: 0; background-image: var(--hive-honeycomb); background-size: 234px auto; opacity: 0.35; }
+  .logo { position: absolute; top: 56px; left: 96px; height: 30px; }
+  .inner { position: absolute; left: 96px; right: 96px; top: 150px; }
+  .eyebrow { font-size: 14px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--hive-gold); }
+  .rule { width: 48px; height: 3px; background: var(--hive-gold); margin: 18px 0 0; }
+  .title { font-family: var(--font-display); font-size: 58px; letter-spacing: 0.04em; color: var(--text-strong); margin: 24px 0 52px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { position: relative; background: var(--surface-card); border: 1px solid var(--border-hairline); border-left: 3px solid var(--hive-gold); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 30px 28px; box-shadow: var(--shadow-sm); }
+  .n { font-family: var(--font-display); font-size: 30px; color: var(--hive-gold); letter-spacing: 0.04em; }
+  .ct { font-family: var(--font-display); font-size: 27px; letter-spacing: 0.03em; color: var(--text-strong); margin: 20px 0 12px; }
+  .cb { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); }
+  .tagline { position: absolute; left: 96px; bottom: 50px; font-family: var(--font-display); font-size: 17px; letter-spacing: 0.05em; }
+  .tagline .g { color: var(--hive-gold); } .tagline .s { color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="hex"></div>
+    <img class="logo" src="../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International">
+    <div class="inner">
+      <div class="eyebrow">What We Do</div>
+      <div class="rule"></div>
+      <h2 class="title">Core Domains</h2>
+      <div class="grid">
+        <div class="card"><div class="n">01</div><div class="ct">Digital Forensics</div><div class="cb">Evidence handling, examination workflows, and intelligence-informed lab modernization.</div></div>
+        <div class="card"><div class="n">02</div><div class="ct">Border Security</div><div class="cb">Intelligence-led targeting, customs enforcement, and trade-fraud advisory.</div></div>
+        <div class="card"><div class="n">03</div><div class="ct">Investigations</div><div class="cb">Multi-jurisdictional investigation support, coordination, and case management.</div></div>
+      </div>
+    </div>
+    <div class="tagline"><span class="g">Advisory Depth.</span> <span class="s">Operational Results.</span></div>
+  </div>
+</body>
+</html>

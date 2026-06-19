@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Client Report" description="Branded government reporting deliverable — slate cover with distribution marking plus a content page with executive summary, findings table and recommendations" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+</helmet>
+
+<div style="background:#0d1218; padding:40px; display:flex; flex-direction:column; align-items:center; gap:40px; font-family:var(--font-body);">
+
+  <!-- COVER -->
+  <div data-screen-label="Client Report — Cover" style="position:relative; width:816px; height:1056px; background:var(--surface-base); box-shadow:var(--shadow-lg); overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:url(../../assets/patterns/honeycomb-slate.png); background-size:234px auto; opacity:0.6;"></div>
+    <img src="../../assets/logos/globe_slate.svg" alt="" aria-hidden="true" style="position:absolute; right:-120px; top:300px; height:460px; opacity:0.09;">
+
+    <!-- Handling marking -->
+    <div style="position:absolute; top:0; left:0; right:0; background:var(--surface-sunken); border-bottom:1px solid var(--border-hairline); padding:9px 0; text-align:center; font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted);">[Distribution Statement / Handling Marking]</div>
+
+    <div style="position:absolute; top:80px; left:64px;">
+      <img src="../../assets/logos/hive_horizontal_gold_charcoal.svg" alt="Hive International" ref="{{ logoRef }}" style="height:120px;">
+    </div>
+
+    <div style="position:absolute; left:64px; right:64px; top:380px;">
+      <div style="font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--hive-gold);">Assessment Report · [Report No.]</div>
+      <div style="width:56px; height:3px; background:var(--hive-gold); margin:20px 0 28px;"></div>
+      <h1 style="font-family:var(--font-display); font-size:62px; line-height:0.98; letter-spacing:0.03em; color:var(--text-strong); margin:0;">[REPORT TITLE — PROGRAM OR ASSESSMENT NAME]</h1>
+      <p style="margin:26px 0 0; font-size:16px; font-weight:300; line-height:1.6; color:var(--text-strong); max-width:540px;">[One-line scope of the deliverable and reporting period.]</p>
+    </div>
+
+    <div style="position:absolute; left:64px; right:64px; bottom:96px; display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <div style="background:var(--surface-card); border-left:3px solid var(--hive-gold); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 18px;"><div style="font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--hive-gold); margin-bottom:6px;">Prepared For</div><div style="font-size:13px; color:var(--text-strong); line-height:1.6;">[Client Agency]<br>[Office / Division]</div></div>
+      <div style="background:var(--surface-card); border-left:3px solid var(--hive-silver); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 18px;"><div style="font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--hive-silver); margin-bottom:6px;">Prepared By</div><div style="font-size:13px; color:var(--text-strong); line-height:1.6;">Hive International, LLC<br>[Date · Version]</div></div>
+    </div>
+
+    <div style="position:absolute; bottom:0; left:0; right:0; background:var(--surface-sunken); border-top:1px solid var(--border-hairline); padding:9px 0; text-align:center; font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted);">[Distribution Statement / Handling Marking]</div>
+  </div>
+
+  <!-- CONTENT PAGE -->
+  <div data-screen-label="Client Report — Content" style="position:relative; width:816px; min-height:1056px; background:var(--surface-light); box-shadow:var(--shadow-lg); overflow:hidden; display:flex; flex-direction:column;">
+    <div style="background:var(--surface-sunken); padding:7px 0; text-align:center; font-size:10px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted);">[Handling Marking]</div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:24px 56px 0;">
+      <img src="../../assets/logos/hive_horizontal_slate.svg" alt="Hive International" style="height:24px;">
+      <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted-light);">[Report No.] · [Short Title]</span>
+    </div>
+    <div style="height:2px; background:var(--hive-gold); margin:16px 56px 0;"></div>
+
+    <div style="flex:1; padding:30px 56px; color:var(--text-on-light);">
+      <!-- Executive summary -->
+      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--hive-gold-deep); margin-bottom:12px;">Executive Summary</div>
+      <p style="margin:0 0 26px; font-size:13.5px; line-height:1.75;">[Two to four sentences summarizing the assessment, the most significant findings, and the headline recommendation. Written for a decision-maker who may read only this section.]</p>
+
+      <!-- Findings -->
+      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--hive-gold-deep); margin-bottom:14px;">Key Findings</div>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:26px;">
+        <div style="display:flex; gap:14px; align-items:flex-start; background:var(--surface-light-card); border:1px solid var(--border-light); border-radius:6px; padding:14px 16px;">
+          <span style="font-family:var(--font-display); font-size:26px; color:var(--hive-gold-deep); line-height:1;">F1</span>
+          <div style="flex:1;"><div style="font-weight:600; font-size:13.5px;">[Finding title]</div><div style="font-size:12.5px; color:var(--text-muted-light); line-height:1.55; margin-top:3px;">[Concise statement of the finding and its operational significance.]</div></div>
+          <span style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#b3261e; background:rgba(229,57,53,0.10); border:1px solid rgba(229,57,53,0.3); border-radius:999px; padding:4px 10px; white-space:nowrap;">High</span>
+        </div>
+        <div style="display:flex; gap:14px; align-items:flex-start; background:var(--surface-light-card); border:1px solid var(--border-light); border-radius:6px; padding:14px 16px;">
+          <span style="font-family:var(--font-display); font-size:26px; color:var(--hive-gold-deep); line-height:1;">F2</span>
+          <div style="flex:1;"><div style="font-weight:600; font-size:13.5px;">[Finding title]</div><div style="font-size:12.5px; color:var(--text-muted-light); line-height:1.55; margin-top:3px;">[Concise statement of the finding and its operational significance.]</div></div>
+          <span style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#8a6d11; background:rgba(242,182,50,0.14); border:1px solid rgba(242,182,50,0.4); border-radius:999px; padding:4px 10px; white-space:nowrap;">Medium</span>
+        </div>
+      </div>
+
+      <!-- Data table -->
+      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--hive-gold-deep); margin-bottom:12px;">Performance Metrics</div>
+      <table style="width:100%; border-collapse:collapse; font-size:12.5px; margin-bottom:26px;">
+        <thead>
+          <tr style="background:var(--surface-base);">
+            <th style="text-align:left; color:var(--hive-gold); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; padding:10px 14px;">Metric</th>
+            <th style="text-align:right; color:var(--hive-gold); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; padding:10px 14px;">Baseline</th>
+            <th style="text-align:right; color:var(--hive-gold); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; padding:10px 14px;">Current</th>
+            <th style="text-align:right; color:var(--hive-gold); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; padding:10px 14px;">Δ</th>
+          </tr>
+        </thead>
+        <tbody style="font-family:var(--font-mono);">
+          <tr style="border-bottom:1px solid var(--border-light);"><td style="padding:9px 14px; font-family:var(--font-body);">[Metric name]</td><td style="padding:9px 14px; text-align:right; color:var(--text-muted-light);">[000]</td><td style="padding:9px 14px; text-align:right;">[000]</td><td style="padding:9px 14px; text-align:right; color:#1f7a2e; font-weight:700;">+[00%]</td></tr>
+          <tr style="border-bottom:1px solid var(--border-light);"><td style="padding:9px 14px; font-family:var(--font-body);">[Metric name]</td><td style="padding:9px 14px; text-align:right; color:var(--text-muted-light);">[000]</td><td style="padding:9px 14px; text-align:right;">[000]</td><td style="padding:9px 14px; text-align:right; color:#1f7a2e; font-weight:700;">+[00%]</td></tr>
+          <tr><td style="padding:9px 14px; font-family:var(--font-body);">[Metric name]</td><td style="padding:9px 14px; text-align:right; color:var(--text-muted-light);">[000]</td><td style="padding:9px 14px; text-align:right;">[000]</td><td style="padding:9px 14px; text-align:right; color:#1f7a2e; font-weight:700;">+[00%]</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Recommendations -->
+      <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--hive-gold-deep); margin-bottom:12px;">Recommendations</div>
+      <ol style="margin:0; padding-left:20px; font-size:13.5px; line-height:1.7; color:var(--text-on-light);">
+        <li style="margin-bottom:8px;">[Prioritized, actionable recommendation tied to a finding.]</li>
+        <li style="margin-bottom:8px;">[Second recommendation with owner and timeframe where possible.]</li>
+        <li>[Third recommendation.]</li>
+      </ol>
+    </div>
+
+    <div style="background:var(--surface-sunken); padding:7px 0; text-align:center; font-size:10px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted);">[Handling Marking] &nbsp;·&nbsp; Page 3</div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 896, &quot;height&quot;: 1136 },
+  &quot;logoSize&quot;: { &quot;editor&quot;: &quot;int&quot;, &quot;default&quot;: 120, &quot;min&quot;: 28, &quot;max&quot;: 160, &quot;step&quot;: 2, &quot;tsType&quot;: &quot;number&quot; }
+}">
+class Component extends DCLogic {
+  logoRef = React.createRef();
+
+  applyLogoSize() {
+    if (this.logoRef.current) {
+      this.logoRef.current.style.height = (this.props.logoSize ?? 120) + 'px';
+    }
+  }
+  componentDidMount() { this.applyLogoSize(); }
+  componentDidUpdate() { this.applyLogoSize(); }
+
+  renderVals() {
+    return { logoRef: this.logoRef };
+  }
+}
+</script>
+</body>
+</html>
