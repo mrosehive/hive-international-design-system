@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hive Product — Page Kit Starter</title>
+<link rel="stylesheet" href="page-kit.css">
+</head>
+<body>
+<!-- ============================================================
+     HIVE PAGE KIT — STARTER
+     Each <div class="sheet"> = one US-Letter page. Keep the pages
+     you need, duplicate or delete freely, fill the [[ ... ]] fields.
+     Render with: python3 page-kit/render.py "<this file>"
+     (or Print ▸ Save as PDF · Letter · margins None · backgrounds ON)
+     Authoritative content rules: see BRAND-PLAYBOOK.md (no fabrication).
+     ============================================================ -->
+
+<!-- ░░ PAGE 1 — COVER (slate) ░░ -->
+<div class="sheet cover">
+  <div class="hex"></div>
+  <img class="globe-wm" src="assets/globe_slate.svg" alt="" aria-hidden="true">
+  <div class="inner">
+    <img class="logo" src="assets/hive_horizontal_gold_charcoal.svg" alt="Hive International">
+    <div class="eyebrow">[[ PRODUCT TYPE — e.g. CAPABILITY BRIEF ]]</div>
+    <div class="rule-sm"></div>
+    <h1 class="title">[[ PRODUCT TITLE — LINE ONE<br><span class="g">LINE TWO IN GOLD.</span> ]]</h1>
+    <p class="subtitle">[[ One-line framing of the document and who it is for. ]]</p>
+    <div class="cover-footer">
+      <span>Prepared for [[ Client / Agency ]] · [[ Date ]]</span>
+      <span class="display" style="font-size:13px;letter-spacing:0.08em;"><span style="color:var(--hive-gold);">ADVISORY DEPTH.</span> <span style="color:var(--text-muted);">OPERATIONAL RESULTS.</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ░░ PAGE 2 — CONTENT, two columns (warm-white) ░░ -->
+<div class="sheet content">
+  <div class="page-head">
+    <img src="assets/hive_horizontal_gold_charcoal.svg" alt="Hive International" style="filter:none;">
+    <span class="kicker">[[ Section / Running Head ]]</span>
+  </div>
+  <div class="gold-rule" style="margin:0.18in var(--page-pad) 0;"></div>
+  <div class="body">
+    <div class="cols-asym">
+      <div>
+        <div class="seclabel">Core Competencies</div>
+        <ul class="hexlist">
+          <li>[[ Competency one ]]</li>
+          <li>[[ Competency two ]]</li>
+          <li>[[ Competency three ]]</li>
+        </ul>
+        <div class="seclabel">Past Performance</div>
+        <div class="card-pp"><div class="name">[[ Program / Client ]]</div><div class="desc">[[ Scope and measurable outcome. ]]</div></div>
+        <div class="card-pp"><div class="name">[[ Program / Client ]]</div><div class="desc">[[ Scope and measurable outcome. ]]</div></div>
+      </div>
+      <div>
+        <div class="databox">
+          <div class="head">Company Data</div>
+          <div class="rows">
+            <div class="r"><span class="k">UEI</span><span>C6QCCKKD7MQ6</span></div>
+            <div class="r"><span class="k">CAGE</span><span>7K4T0</span></div>
+            <div class="r"><span class="k">GSA MAS</span><span>47QRAA25D004V</span></div>
+            <div class="r"><span class="k">NAICS</span><span>541611 · 561611</span></div>
+          </div>
+        </div>
+        <div class="seclabel" style="margin-top:24px;">Contract Identity</div>
+        <div class="gsa-badge"><img src="assets/gsa_schedule_charcoal.png" alt="GSA Schedule — 47QRAA25D004V"></div>
+      </div>
+    </div>
+  </div>
+  <div class="page-foot"><span>Hive International, LLC · hiveintl.com</span><span class="tag"><span class="g">ADVISORY DEPTH.</span> OPERATIONAL RESULTS.</span></div>
+</div>
+
+<!-- ░░ PAGE 3 — SECTION DIVIDER (deep slate) ░░ -->
+<div class="sheet divider">
+  <div class="hex"></div>
+  <div class="inner">
+    <div class="num">01</div>
+    <div class="eyebrow">[[ Section label ]]</div>
+    <div class="rule-sm"></div>
+    <div class="dtitle">[[ SECTION TITLE ]]</div>
+  </div>
+</div>
+
+<!-- ░░ PAGE 4 — REPORT CONTENT, one column + stat band + table ░░ -->
+<div class="sheet content">
+  <div class="page-head">
+    <img src="assets/hive_horizontal_gold_charcoal.svg" alt="Hive International">
+    <span class="kicker">[[ Running Head ]]</span>
+  </div>
+  <div class="gold-rule" style="margin:0.18in var(--page-pad) 0;"></div>
+  <div class="body">
+    <h2 class="h2">[[ Heading ]]</h2>
+    <div class="body-text" style="max-width:var(--content-max);">
+      <p>[[ Body paragraph. Body text is justified-readable; lead with the outcome, stay proof-backed and specific. ]]</p>
+    </div>
+
+    <div class="statband" style="margin:0.28in 0;">
+      <div class="stat"><span class="v">[[ 00 ]]</span><span class="l">[[ Metric ]]</span><span class="d">[[ context ]]</span></div>
+      <div class="stat"><span class="v">[[ 00% ]]</span><span class="l">[[ Metric ]]</span><span class="d">[[ context ]]</span></div>
+      <div class="stat"><span class="v">[[ 000 ]]</span><span class="l">[[ Metric ]]</span><span class="d">[[ context ]]</span></div>
+    </div>
+
+    <div class="callout" style="margin-bottom:0.24in;"><b>[[ Key point / finding. ]]</b> [[ Supporting sentence. ]]</div>
+
+    <table class="hive">
+      <thead><tr><th>[[ Column ]]</th><th>[[ Column ]]</th><th>[[ Column ]]</th></tr></thead>
+      <tbody>
+        <tr><td>[[ row ]]</td><td>[[ row ]]</td><td>[[ row ]]</td></tr>
+        <tr><td>[[ row ]]</td><td>[[ row ]]</td><td>[[ row ]]</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="page-foot"><span>Hive International, LLC · hiveintl.com</span><span class="tag"><span class="g">ADVISORY DEPTH.</span> OPERATIONAL RESULTS.</span></div>
+</div>
+
+<!-- ░░ PAGE 5 — BACK / CONTACT (slate) ░░ -->
+<div class="sheet cover">
+  <div class="hex"></div>
+  <div class="inner" style="padding-top:1.1in;">
+    <img class="logo" src="assets/hive_horizontal_gold_charcoal.svg" alt="Hive International">
+    <div class="eyebrow">Contact</div>
+    <div class="rule-sm"></div>
+    <div style="font-size:15px;line-height:1.9;color:var(--text-body);">
+      [[ Name ]], [[ Title ]]<br>[[ email@hiveintl.com ]] · [[ +1 (000) 000-0000 ]]<br>
+      211 N. Union St., Ste. 100, Alexandria, VA 22314<br>hiveintl.com
+    </div>
+    <div class="cover-footer">
+      <span class="muted" style="font-family:var(--font-mono);font-size:10.5px;">GSA MAS 47QRAA25D004V · UEI C6QCCKKD7MQ6 · CAGE 7K4T0</span>
+      <span class="display" style="font-size:13px;letter-spacing:0.08em;"><span style="color:var(--hive-gold);">ADVISORY DEPTH.</span> <span style="color:var(--text-muted);">OPERATIONAL RESULTS.</span></span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

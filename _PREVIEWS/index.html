@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hive International — Design System Previews</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html,body{margin:0;}
+  body{background:var(--surface-base);color:var(--text-body);font-family:var(--font-body);
+       background-image:var(--hive-honeycomb);background-size:300px auto;}
+  .wrap{max-width:1080px;margin:0 auto;padding:56px 32px 80px;}
+  header .eyebrow{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--hive-gold);}
+  header .rule{width:56px;height:3px;background:var(--hive-gold);margin:16px 0 22px;}
+  header h1{font-family:var(--font-display);font-size:56px;line-height:0.96;letter-spacing:0.03em;
+            color:var(--text-strong);margin:0;}
+  header p{max-width:660px;font-size:15px;line-height:1.7;color:var(--text-muted);margin:18px 0 0;}
+  header .note{margin-top:18px;font-size:12.5px;line-height:1.6;color:var(--text-muted);
+               border-left:3px solid var(--hive-gold);padding:10px 16px;background:var(--surface-raised);
+               border-radius:0 6px 6px 0;}
+  header .note b{color:var(--hive-gold);}
+  h2{font-family:var(--font-display);font-size:26px;letter-spacing:0.05em;color:var(--text-strong);
+     margin:52px 0 4px;}
+  .seclead{font-size:13px;color:var(--text-muted);margin:0 0 20px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+  a.card{display:flex;flex-direction:column;text-decoration:none;background:var(--surface-card);
+         border:1px solid var(--border-hairline);border-left:3px solid transparent;border-radius:6px;
+         padding:18px 20px;transition:border-color .15s,background .15s,transform .15s;}
+  a.card:hover{border-left-color:var(--hive-gold);background:var(--surface-hover);transform:translateY(-1px);}
+  a.card .name{font-size:15px;font-weight:600;color:var(--text-strong);display:flex;
+               justify-content:space-between;align-items:baseline;gap:8px;}
+  a.card .name .go{color:var(--hive-gold);font-size:18px;font-weight:400;}
+  a.card .desc{font-size:12.5px;line-height:1.55;color:var(--text-muted);margin-top:7px;}
+  .compact{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
+  .compact a.card{padding:13px 16px;}
+  .compact .name{font-size:13.5px;}
+  footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--border-hairline);
+         display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--text-muted);}
+  footer .tag{font-family:var(--font-display);font-size:13px;letter-spacing:0.08em;}
+  footer .tag .g{color:var(--hive-gold);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Hive International — Design System</div>
+    <div class="rule"></div>
+    <h1>TEMPLATE &amp; ASSET PREVIEWS</h1>
+    <p>Browser-viewable renders of every template, slide, guideline card and component in the design
+      system — populated with placeholder/sample content so the look can be reviewed before real
+      content is dropped in. Each link opens the live HTML; print any document preview to PDF (Letter,
+      margins None, background graphics on).</p>
+    <div class="note">Templates here are <b>previews</b> built from the system's source files. The
+      fillable production capability-statement lives in <b>Graphics&nbsp;&amp;&nbsp;Branding ▸ Templates ▸
+      Capability Statement</b>. The Capability Website preview needs an internet connection (loads React).</div>
+  </header>
+
+  <h2>Document Templates</h2>
+  <p class="seclead">One-page and multi-page branded deliverables.</p>
+  <div class="grid">
+    <a class="card" href="capability-statement.html" target="_blank"><span class="name">Capability Statement <span class="go">→</span></span><span class="desc">Federal one-pager — slate header, core competencies, differentiators, past performance, company data.</span></a>
+    <a class="card" href="capability-brief.html" target="_blank"><span class="name">Capability Brief <span class="go">→</span></span><span class="desc">One-page slate cover with stats, capability domains and GSA contract identity.</span></a>
+    <a class="card" href="case-study.html" target="_blank"><span class="name">Case Study <span class="go">→</span></span><span class="desc">Engagement case study — challenge / approach / outcome with a results metric band.</span></a>
+    <a class="card" href="client-report.html" target="_blank"><span class="name">Client Report <span class="go">→</span></span><span class="desc">Government reporting deliverable — distribution-marked cover, exec summary, findings table, recommendations.</span></a>
+    <a class="card" href="white-paper.html" target="_blank"><span class="name">White Paper <span class="go">→</span></span><span class="desc">Slate cover plus a warm-white editorial content page with abstract sidebar and pull quote.</span></a>
+    <a class="card" href="letterhead.html" target="_blank"><span class="name">Letterhead <span class="go">→</span></span><span class="desc">Warm-white US Letter letterhead — logo header, contract-identity sidebar, slate footer.</span></a>
+    <a class="card" href="slide-deck.html" target="_blank"><span class="name">Slide Deck <span class="go">→</span></span><span class="desc">16:9 deck — title, agenda, divider, content, stats, two-column, quote and closing slides.</span></a>
+  </div>
+
+  <h2>Slides</h2>
+  <p class="seclead">Individual 16:9 slide layouts (1280×720).</p>
+  <div class="grid">
+    <a class="card" href="../slides/TitleSlide.html" target="_blank"><span class="name">Title Slide <span class="go">→</span></span><span class="desc">Slate cover with globe watermark + tagline.</span></a>
+    <a class="card" href="../slides/SectionDivider.html" target="_blank"><span class="name">Section Divider <span class="go">→</span></span><span class="desc">Deep-slate divider with oversized index numeral.</span></a>
+    <a class="card" href="../slides/CapabilitySlide.html" target="_blank"><span class="name">Capability Slide <span class="go">→</span></span><span class="desc">Three-column capability layout with cards.</span></a>
+    <a class="card" href="../slides/ByTheNumbers.html" target="_blank"><span class="name">By the Numbers <span class="go">→</span></span><span class="desc">Stat band with gold numerals and dividers.</span></a>
+    <a class="card" href="../slides/BigQuote.html" target="_blank"><span class="name">Big Quote <span class="go">→</span></span><span class="desc">Charcoal pull-quote slide with gold accent.</span></a>
+  </div>
+
+  <h2>Foundations — Guideline Cards</h2>
+  <p class="seclead">Specimen cards for color, type, spacing and brand.</p>
+  <div class="grid compact">
+    <a class="card" href="../guidelines/colors-surfaces.card.html" target="_blank"><span class="name">Primary Surfaces <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/colors-accent.card.html" target="_blank"><span class="name">Accent &amp; Neutral <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/colors-gold-discipline.card.html" target="_blank"><span class="name">Gold Discipline <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/colors-status.card.html" target="_blank"><span class="name">Semantic Status <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/type-display.card.html" target="_blank"><span class="name">Display — Bebas Neue <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/type-body.card.html" target="_blank"><span class="name">Body — DM Sans <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/type-mono.card.html" target="_blank"><span class="name">Mono — Space Mono <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/type-scale.card.html" target="_blank"><span class="name">Type Scale <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/spacing-scale.card.html" target="_blank"><span class="name">Spacing Scale <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/spacing-radius.card.html" target="_blank"><span class="name">Radius <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/spacing-borders.card.html" target="_blank"><span class="name">Borders &amp; Accent Rule <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/spacing-elevation.card.html" target="_blank"><span class="name">Elevation <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/brand-logos.card.html" target="_blank"><span class="name">Primary Logo Lockups <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/brand-globe.card.html" target="_blank"><span class="name">Globe Mark <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/brand-hex-mesh.card.html" target="_blank"><span class="name">Hex Mesh Motif <span class="go">→</span></span></a>
+    <a class="card" href="../guidelines/brand-contract-identity.card.html" target="_blank"><span class="name">Contract Identity (GSA) <span class="go">→</span></span></a>
+  </div>
+
+  <h2>Components &amp; Screens</h2>
+  <p class="seclead">UI primitives and the full capability website.</p>
+  <div class="grid">
+    <a class="card" href="../components/core/core.card.html" target="_blank"><span class="name">Core Primitives <span class="go">→</span></span><span class="desc">Buttons, badges, tags, inputs, stats, cards &amp; avatars.</span></a>
+    <a class="card" href="../ui_kits/capability_site/index.html" target="_blank"><span class="name">Capability Website <span class="go">→</span></span><span class="desc">Full marketing site — hero, capabilities, by-the-numbers, contract footer. (Needs internet.)</span></a>
+  </div>
+
+  <footer>
+    <span>Hive International, LLC · Design System Previews · hiveintl.com</span>
+    <span class="tag"><span class="g">ADVISORY DEPTH.</span> OPERATIONAL RESULTS.</span>
+  </footer>
+
+</div>
+</body>
+</html>
